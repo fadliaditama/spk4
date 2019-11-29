@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Nov 2019 pada 12.57
--- Versi server: 10.1.31-MariaDB
--- Versi PHP: 7.2.3
+-- Generation Time: Nov 29, 2019 at 01:22 PM
+-- Server version: 10.1.34-MariaDB
+-- PHP Version: 7.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mahasiswa`
+-- Table structure for table `mahasiswa`
 --
 
 CREATE TABLE `mahasiswa` (
@@ -39,14 +39,14 @@ CREATE TABLE `mahasiswa` (
   `chlorides` float NOT NULL,
   `free_sulfur_dioxide` float NOT NULL,
   `sulphates` float NOT NULL,
-  `alchohol` float NOT NULL
+  `alcohol` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `mahasiswa`
+-- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`id`, `nama`, `fixed_acid`, `volatile_acid`, `citric_acid`, `ph`, `residual_sugar`, `chlorides`, `free_sulfur_dioxide`, `sulphates`, `alchohol`) VALUES
+INSERT INTO `mahasiswa` (`id`, `nama`, `fixed_acid`, `volatile_acid`, `citric_acid`, `ph`, `residual_sugar`, `chlorides`, `free_sulfur_dioxide`, `sulphates`, `alcohol`) VALUES
 (1, 'fadli', 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 --
@@ -54,17 +54,17 @@ INSERT INTO `mahasiswa` (`id`, `nama`, `fixed_acid`, `volatile_acid`, `citric_ac
 --
 
 --
--- Indeks untuk tabel `mahasiswa`
+-- Indexes for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `mahasiswa`
+-- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

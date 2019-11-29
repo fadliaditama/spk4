@@ -62,8 +62,16 @@
 			<thead>
 				<tr>
 					<th>no</th>
-					<th>Kode Alternatif</th>
 					<th>Nama</th>
+					<th>Fixed Acid</th>
+					<th>Volatile Acid</th>
+					<th>Citric Acid</th>
+					<th>pH</th>
+					<th>Residual Sugar</th>
+					<th>Chlorides</th>
+					<th>Free Sulfur Dioxide</th>
+					<th>Sulphates</th>
+					<th>Alcohol</th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -74,8 +82,16 @@
 				{ ?>
 					<tr>
 						<td><?php echo $no++ ?></td>
-						<td><?php echo $row->nim?></td>
 						<td><?php echo $row->nama?></td>
+						<td><?php echo $row->fixed_acid?></td>
+						<td><?php echo $row->volatile_acid?></td>
+						<td><?php echo $row->citric_acid?></td>
+						<td><?php echo $row->ph?></td>
+						<td><?php echo $row->residual_sugar?></td>
+						<td><?php echo $row->chlorides?></td>
+						<td><?php echo $row->free_sulfur_dioxide?></td>
+						<td><?php echo $row->sulphates?></td>
+						<td><?php echo $row->alcohol?></td>
 						<td><button type="submit" class="btn btn-warning btn-sm">edit</button><button type="delete" class="btn btn-danger btn-sm">delete</button></td>
 					</tr>				
 				<?php } ?>

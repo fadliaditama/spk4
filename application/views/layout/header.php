@@ -59,7 +59,9 @@ $(document).ready(function(){
   });
 });
 </script>
+<script src="<?=base_url()?>assets/dist/js/sort-table.js"></script>
 	<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/dist/js/sort-table.js">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">

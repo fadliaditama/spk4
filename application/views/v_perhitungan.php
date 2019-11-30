@@ -264,12 +264,12 @@
 		<br>
 		<div>
 			<h2>Ranking</h2>
-			<table class="table table-bordered">
+			<table class="table table-bordered js-sort-table">
 				<thead>
 					<tr>
 						<th>Ranking</th>
 						<th>Nama Alternatif</th>
-						<th>Nilai Total</th>
+						<th class="js-sort-number">Nilai Total</th>
 					</tr>
 				</thead>
 				<tbody>

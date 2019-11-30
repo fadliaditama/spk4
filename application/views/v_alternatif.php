@@ -13,19 +13,19 @@
 		  <div class="row">
 		    <div class="col-md-2">
 		    	<label for="">Fixed Acid</label>
-		      <input type="text" class="form-control" name="fixed_acid" required="">
+		      <input type="number" class="form-control" name="fixed_acid" required="" min="0" max="13">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Volatile Acid</label>
-		      <input type="text" class="form-control" name="volatile_acid" required="">
+		      <input type="number" class="form-control" name="volatile_acid" required="" min="0" max="2">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Citric Acid</label>
-		      <input type="text" class="form-control" name="citric_acid" required="">
+		      <input type="number" class="form-control" name="citric_acid" required="" min="0" max="1">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">pH</label>
-		      <input type="text" class="form-control" name="ph" required="">
+		      <input type="number" class="form-control" name="ph" required="" min="0" max="14">
 		    </div>
 		  </div>
 		  <br>
@@ -33,23 +33,23 @@
 		  <div class="row">
 		    <div class="col-md-2">
 		    	<label for="">Residual Sugar</label>
-		      <input type="text" class="form-control" name="residual_sugar" required="">
+		      <input type="number" class="form-control" name="residual_sugar" required="" min="0" max="16">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Chlorides</label>
-		      <input type="text" class="form-control" name="chlorides" required="">
+		      <input type="number" class="form-control" name="chlorides" required="" min="0" max="1">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Free Sulfur Dioxide</label>
-		      <input type="text" class="form-control" name="free_sulfur_dioxide" required="">
+		      <input type="number" class="form-control" name="free_sulfur_dioxide" required="" min="1" max="100">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Sulphates</label>
-		      <input type="text" class="form-control" name="sulphates" required="">
+		      <input type="number" class="form-control" name="sulphates" required="" min="0" max="2">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Alcohol</label>
-		      <input type="text" class="form-control" name="alcohol" required="">
+		      <input type="number" class="form-control" name="alcohol" required="" min="0" max="16">
 		    </div>
 		  </div>
 		  <br>

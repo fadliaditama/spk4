@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
   <script>
 $(document).ready(function(){
   $(".btn1").click(function(){
@@ -12,6 +12,55 @@ $(document).ready(function(){
     $("#tab1").show();
   });
 });
+function hapus(url)
+    {
+      swal({
+        title: "Hapus Jangan?",
+          text: "Data tidak bisa dikembalikan",
+          icon: "warning",
+        // buttons: true,
+        buttons: ["tidak", "ya!"],
+        dangerMode: true,
+        })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal({
+            title: "Poof!",
+              text: "Data dihapus!",
+            icon: "success",
+            closeOnConfirm: true,
+          })
+          .then((okay) =>{
+            if(okay)
+              window.location = url;
+            else
+              window.location = url;
+          });
+        } 
+        else {
+          swal({
+            title: "Safe!",
+              text: "Data tidak dihapus!",
+          });
+        }
+      });
+      return false;
+    }
+    function tambah()
+    {
+      swal({
+        title: "Noice!",
+          text: "Data berhasil ditambahkan",
+          icon: "success",
+        // buttons: true,
+        button: "Okay!",
+      }).then((okay) =>{
+        if(okay)
+          document.getElementById("myform").submit(); 
+        else
+          document.getElementById("myform").submit(); 
+      });
+    }
 </script>
 <script>
 $(document).ready(function(){

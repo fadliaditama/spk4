@@ -267,7 +267,7 @@
 			<table class="table table-bordered js-sort-table">
 				<thead>
 					<tr>
-						<th>Ranking</th>
+						<th>No</th>
 						<th>Nama Alternatif</th>
 						<th class="js-sort-number">Nilai Total</th>
 					</tr>

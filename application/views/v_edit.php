@@ -2,7 +2,7 @@
 <div class="container">
 	<h1>Edit Data</h1>
 	<?php foreach($mahasiswa as $mhs)?>
-	<form id="myformedit" method="post" onsubmit="edit().$row->id;return false;" action='<?= base_url('alternatif/edit') ?>'>
+	<form id="myformedit" method="post" onsubmit="edit();return false;" action="<?= base_url('alternatif/update/').$mhs->id ?>">
 			  <div class="row">
 			    <div class="col-md-3">
 			    	<label for="">Nama Alternatif</label>
@@ -55,8 +55,29 @@
 			  </div>
 			  <br>
 			  <div>
-			  	<button type="submit" class="btn btn-primary" value="edit">Edit</button>
+			  	<!-- <button type="submit" class="btn btn-primary" value="edit">Edit</button> -->
+			  	<a href="<?= base_url('alternatif') ?>">
+			  		<button type="button" class="btn btn-primary">Kembali</button>
+			  	</a>
+			  		<button type="submit" class="btn btn-danger">Update</button>
 			  </div>
 		</form>
 </div>
-	<?php $this->load->view('layout/footer');?>
+<script type="text/javascript">
+	function edit()
+    {
+      swal({
+        title: "Noice!",
+          text: "Data berhasil diedit",
+          icon: "success",
+        // buttons: true,
+        button: "Okay!",
+      }).then((okay) =>{
+        if(okay)
+          document.getElementById("myformedit").submit(); 
+        else
+          document.getElementById("myformedit").submit(); 
+      });
+    }
+</script>
+<?php $this->load->view('layout/footer');?>

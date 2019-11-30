@@ -53,5 +53,26 @@ class Alternatif extends CI_Controller {
 		$data['mahasiswa'] = $this->M_Alternatif->edit($id,'mahasiswa')->result();
 		$this->load->view('v_edit',$data);
 	}
+
+	public function update($id)
+	{
+		$data = array(
+		'nama' 					=> $this->input->post('nama'),
+		'fixed_acid' 			=> $this->input->post('fixed_acid'),
+		'volatile_acid' 		=> $this->input->post('volatile_acid'),
+		'citric_acid'			=> $this->input->post('citric_acid'),
+		'ph' 					=> $this->input->post('ph'),
+		'residual_sugar'		=> $this->input->post('residual_sugar'),
+		'chlorides' 			=> $this->input->post('chlorides'),
+		'free_sulfur_dioxide' 	=> $this->input->post('free_sulfur_dioxide'),
+		'sulphates' 			=> $this->input->post('sulphates'),
+		'alcohol' 				=> $this->input->post('alcohol')
+		);
+		$tabel = 'mahasiswa';
+
+		$this->db->where('id', $id);
+		$this->db->update($tabel, $data);
+		redirect('alternatif','refresh');
+	}
 }
 ?>

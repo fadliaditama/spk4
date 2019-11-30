@@ -48,36 +48,6 @@ function hapus(url)
       });
       return false;
     }
-    function tambah()
-    {
-      swal({
-        title: "Noice!",
-          text: "Data berhasil ditambahkan",
-          icon: "success",
-        // buttons: true,
-        button: "Okay!",
-      }).then((okay) =>{
-        if(okay)
-          document.getElementById("myform").submit(); 
-        else
-          document.getElementById("myform").submit(); 
-      });
-    }
-    function edit()
-    {
-      swal({
-        title: "Noice!",
-          text: "Data berhasil diedit",
-          icon: "success",
-        // buttons: true,
-        button: "Okay!",
-      }).then((okay) =>{
-        if(okay)
-          document.getElementById("myformedit").submit(); 
-        else
-          document.getElementById("myformedit").submit(); 
-      });
-    }
 </script>
 <script>
 $(document).ready(function(){

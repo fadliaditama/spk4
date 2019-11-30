@@ -94,7 +94,7 @@
 						<td><?php echo $row->alcohol?></td>
 						<td>
 							<a href="<?=base_url('alternatif/edit/').$row->id; ?>" title=""><button type="submit" class="btn btn-warning btn-sm">edit</button></a>
-							<!-- <a href="<?= base_url('alternatif/hapus/').$row->id ?>" title=""><button type="delete" class="btn btn-danger btn-sm">delete</button></a> -->
+							
 							<?php $hapus = base_url('alternatif/hapus/').$row->id; ?>
 							<a href="" onclick="hapus('<?= $hapus ?>');return false;"><button type="delete" class="btn btn-danger btn-sm">delete</button></a>
 						</td>
@@ -103,5 +103,22 @@
 			</tbody>
 		</table>
 	</div>
+	<script type="text/javascript">
+		function tambah()
+	    {
+	      swal({
+	        title: "Noice!",
+	          text: "Data berhasil ditambahkan",
+	          icon: "success",
+	        // buttons: true,
+	        button: "Okay!",
+	      }).then((okay) =>{
+	        if(okay)
+	          document.getElementById("myform").submit(); 
+	        else
+	          document.getElementById("myform").submit(); 
+	      });
+	    }
+	</script>
 <?php $this->load->view('layout/footer');?>
 

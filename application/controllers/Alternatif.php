@@ -47,5 +47,11 @@ class Alternatif extends CI_Controller {
 		redirect('alternatif','refresh');
 	}
 	
+	public function edit($id)
+	{
+		$id = array('id' => $id);
+		$data['mahasiswa'] = $this->M_Alternatif->edit($id,'mahasiswa')->result();
+		$this->load->view('v_edit',$data);
+	}
 }
 ?>

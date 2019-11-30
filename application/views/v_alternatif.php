@@ -76,8 +76,6 @@
 				</tr>
 			</thead>
 			<tbody>
-			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-			<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 				<?php
 				$no = 1;
 				foreach ($mahasiswa as $row) 
@@ -95,7 +93,7 @@
 						<td><?php echo $row->sulphates?></td>
 						<td><?php echo $row->alcohol?></td>
 						<td>
-							<a href="" title=""><button type="submit" class="btn btn-warning btn-sm">edit</button></a>
+							<a href="<?=base_url('alternatif/edit/').$row->id; ?>" title=""><button type="submit" class="btn btn-warning btn-sm">edit</button></a>
 							<!-- <a href="<?= base_url('alternatif/hapus/').$row->id ?>" title=""><button type="delete" class="btn btn-danger btn-sm">delete</button></a> -->
 							<?php $hapus = base_url('alternatif/hapus/').$row->id; ?>
 							<a href="" onclick="hapus('<?= $hapus ?>');return false;"><button type="delete" class="btn btn-danger btn-sm">delete</button></a>
@@ -105,57 +103,5 @@
 			</tbody>
 		</table>
 	</div>
-	<script type="text/javascript">
-		function hapus(url)
-		{
-			swal({
-				title: "Hapus Jangan?",
-			    text: "Data tidak bisa dikembalikan",
-			    icon: "warning",
-				// buttons: true,
-				buttons: ["tidak", "ya!"],
-				dangerMode: true,
-				})
-			.then((willDelete) => {
-				if (willDelete) {
-					swal({
-						title: "Poof!",
-			    		text: "Data dihapus!",
-						icon: "success",
-						closeOnConfirm: true,
-					})
-					.then((okay) =>{
-						if(okay)
-							window.location = url;
-						else
-							window.location = url;
-					});
-				} 
-				else {
-					swal({
-						title: "Safe!",
-			    		text: "Data tidak dihapus!",
-					});
-				}
-			});
-			return false;
-		}
-		function tambah()
-		{
-			swal({
-				title: "Noice!",
-			    text: "Data berhasil ditambahkan",
-			    icon: "success",
-				// buttons: true,
-				button: "Okay!",
-			}).then((okay) =>{
-				if(okay)
-					document.getElementById("myform").submit(); 
-				else
-					document.getElementById("myform").submit(); 
-			});
-		}
-	</script>
-	
 <?php $this->load->view('layout/footer');?>
 

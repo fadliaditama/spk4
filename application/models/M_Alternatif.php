@@ -16,6 +16,11 @@ class M_Alternatif extends CI_Model
 		$this->db->where($id);
 		$this->db->delete($table);
 	}
+
+	function edit($id,$table)
+	{
+		return $this->db->get_where($table,$id);
+	}
 }
 
  ?>

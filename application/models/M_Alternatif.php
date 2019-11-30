@@ -6,14 +6,14 @@ class M_Alternatif extends CI_Model
 		return $this->db->get('mahasiswa')->result();
 	}
 
-	function insert($data,$table)
+	function insert($table,$data)
 	{
 		$this->db->insert($table,$data);
 	}
 
-	function hapus($where,$table)
+	function hapus($id,$table)
 	{
-		$this->db->where($where);
+		$this->db->where($id);
 		$this->db->delete($table);
 	}
 }

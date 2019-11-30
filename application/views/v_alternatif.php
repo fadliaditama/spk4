@@ -1,11 +1,11 @@
 <?php $this->load->view('layout/header');?>
 	<div class="container"> 
 		<h1>Alternatif</h1>
-		<form action="<?php base_url(). 'alternatif/insert'; ?>" method="post">
+		<form id="myform" method="post" onsubmit="tambah();return false;" action='<?= base_url('alternatif/insert') ?>'>
 		  <div class="row">
 		    <div class="col-md-3">
 		    	<label for="">Nama Alternatif</label>
-		      <input type="text" class="form-control" placeholder="First name" name="nama">
+		      <input type="text" class="form-control" placeholder="First name" name="nama" required="">
 		    </div>
 		  </div>
 		  <br>
@@ -13,19 +13,19 @@
 		  <div class="row">
 		    <div class="col-md-2">
 		    	<label for="">Fixed Acid</label>
-		      <input type="text" class="form-control" placeholder="First name" name="fixed_acid">
+		      <input type="text" class="form-control" name="fixed_acid" required="">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Volatile Acid</label>
-		      <input type="text" class="form-control" placeholder="First name" name="volatile_acid">
+		      <input type="text" class="form-control" name="volatile_acid" required="">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Citric Acid</label>
-		      <input type="text" class="form-control" placeholder="First name" name="citric_acid">
+		      <input type="text" class="form-control" name="citric_acid" required="">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">pH</label>
-		      <input type="text" class="form-control" placeholder="First name" name="ph">
+		      <input type="text" class="form-control" name="ph" required="">
 		    </div>
 		  </div>
 		  <br>
@@ -33,23 +33,23 @@
 		  <div class="row">
 		    <div class="col-md-2">
 		    	<label for="">Residual Sugar</label>
-		      <input type="text" class="form-control" placeholder="First name" name="residual_sugar">
+		      <input type="text" class="form-control" name="residual_sugar" required="">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Chlorides</label>
-		      <input type="text" class="form-control" placeholder="First name" name="chlorides">
+		      <input type="text" class="form-control" name="chlorides" required="">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Free Sulfur Dioxide</label>
-		      <input type="text" class="form-control" placeholder="First name" name="free_sulfur_dioxide">
+		      <input type="text" class="form-control" name="free_sulfur_dioxide" required="">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Sulphates</label>
-		      <input type="text" class="form-control" placeholder="First name" name="sulphates">
+		      <input type="text" class="form-control" name="sulphates" required="">
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">Alcohol</label>
-		      <input type="text" class="form-control" placeholder="First name" name="alcohol">
+		      <input type="text" class="form-control" name="alcohol" required="">
 		    </div>
 		  </div>
 		  <br>
@@ -76,6 +76,8 @@
 				</tr>
 			</thead>
 			<tbody>
+			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+			<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 				<?php
 				$no = 1;
 				foreach ($mahasiswa as $row) 
@@ -92,11 +94,68 @@
 						<td><?php echo $row->free_sulfur_dioxide?></td>
 						<td><?php echo $row->sulphates?></td>
 						<td><?php echo $row->alcohol?></td>
-						<td><a href="" title=""><button type="submit" class="btn btn-warning btn-sm">edit</button></a><a href="<?php base_url(). 'alternatif/hapus'; ?>" title=""><button type="delete" class="btn btn-danger btn-sm">delete</button></a></td>
+						<td>
+							<a href="" title=""><button type="submit" class="btn btn-warning btn-sm">edit</button></a>
+							<!-- <a href="<?= base_url('alternatif/hapus/').$row->id ?>" title=""><button type="delete" class="btn btn-danger btn-sm">delete</button></a> -->
+							<?php $hapus = base_url('alternatif/hapus/').$row->id; ?>
+							<a href="" onclick="hapus('<?= $hapus ?>');return false;"><button type="delete" class="btn btn-danger btn-sm">delete</button></a>
+						</td>
 					</tr>				
 				<?php } ?>
 			</tbody>
 		</table>
 	</div>
+	<script type="text/javascript">
+		function hapus(url)
+		{
+			swal({
+				title: "Hapus Jangan?",
+			    text: "Data tidak bisa dikembalikan",
+			    icon: "warning",
+				// buttons: true,
+				buttons: ["tidak", "ya!"],
+				dangerMode: true,
+				})
+			.then((willDelete) => {
+				if (willDelete) {
+					swal({
+						title: "Poof!",
+			    		text: "Data dihapus!",
+						icon: "success",
+						closeOnConfirm: true,
+					})
+					.then((okay) =>{
+						if(okay)
+							window.location = url;
+						else
+							window.location = url;
+					});
+				} 
+				else {
+					swal({
+						title: "Safe!",
+			    		text: "Data tidak dihapus!",
+					});
+				}
+			});
+			return false;
+		}
+		function tambah()
+		{
+			swal({
+				title: "Noice!",
+			    text: "Data berhasil ditambahkan",
+			    icon: "success",
+				// buttons: true,
+				button: "Okay!",
+			}).then((okay) =>{
+				if(okay)
+					document.getElementById("myform").submit(); 
+				else
+					document.getElementById("myform").submit(); 
+			});
+		}
+	</script>
+	
 <?php $this->load->view('layout/footer');?>
 

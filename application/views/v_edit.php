@@ -14,19 +14,19 @@
 			  <div class="row">
 			    <div class="col-md-2">
 			    	<label for="">Fixed Acid</label>
-			      <input type="number" class="form-control" name="fixed_acid" required="" min="0" max="13"value="<?php echo $mhs->fixed_acid ?>">
+			      <input type="number" class="form-control" name="fixed_acid" required="" value="<?php echo $mhs->fixed_acid ?>">
 			    </div>
 			    <div class="col-md-2">
 			    	<label for="">Volatile Acid</label>
-			      <input type="number" class="form-control" name="volatile_acid" required="" min="0" max="2" value="<?php echo $mhs->volatile_acid ?>">
+			      <input type="number" class="form-control" name="volatile_acid" required="" value="<?php echo $mhs->volatile_acid ?>">
 			    </div>
 			    <div class="col-md-2">
 			    	<label for="">Citric Acid</label>
-			      <input type="number" class="form-control" name="citric_acid" required="" min="0" max="1" value="<?php echo $mhs->citric_acid ?>">
+			      <input type="number" class="form-control" name="citric_acid" required="" value="<?php echo $mhs->citric_acid ?>">
 			    </div>
 			    <div class="col-md-2">
 			    	<label for="">pH</label>
-			      <input type="number" class="form-control" name="ph" required="" min="0" max="14" value="<?php echo $mhs->ph ?>">
+			      <input type="number" class="form-control" name="ph" required="" value="<?php echo $mhs->ph ?>">
 			    </div>
 			  </div>
 			  <br>
@@ -34,23 +34,23 @@
 			  <div class="row">
 			    <div class="col-md-2">
 			    	<label for="">Residual Sugar</label>
-			      <input type="number" class="form-control" name="residual_sugar" required="" min="0" max="16" value="<?php echo $mhs->residual_sugar ?>">
+			      <input type="number" class="form-control" name="residual_sugar" required="" value="<?php echo $mhs->residual_sugar ?>">
 			    </div>
 			    <div class="col-md-2">
 			    	<label for="">Chlorides</label>
-			      <input type="number" class="form-control" name="chlorides" required="" min="0" max="1" value="<?php echo $mhs->chlorides ?>">
+			      <input type="number" class="form-control" name="chlorides" required="" value="<?php echo $mhs->chlorides ?>">
 			    </div>
 			    <div class="col-md-2">
 			    	<label for="">Free Sulfur Dioxide</label>
-			      <input type="number" class="form-control" name="free_sulfur_dioxide" required="" min="1" max="100" value="<?php echo $mhs->free_sulfur_dioxide ?>">
+			      <input type="number" class="form-control" name="free_sulfur_dioxide" required="" value="<?php echo $mhs->free_sulfur_dioxide ?>">
 			    </div>
 			    <div class="col-md-2">
 			    	<label for="">Sulphates</label>
-			      <input type="number" class="form-control" name="sulphates" required="" min="0" max="2" value="<?php echo $mhs->sulphates ?>">
+			      <input type="number" class="form-control" name="sulphates" required="" value="<?php echo $mhs->sulphates ?>">
 			    </div>
 			    <div class="col-md-2">
 			    	<label for="">Alcohol</label>
-			      <input type="number" class="form-control" name="alcohol" required="" min="0" max="16" value="<?php echo $mhs->alcohol ?>">
+			      <input type="number" class="form-control" name="alcohol" required="" value="<?php echo $mhs->alcohol ?>">
 			    </div>
 			  </div>
 			  <br>

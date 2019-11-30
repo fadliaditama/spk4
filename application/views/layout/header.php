@@ -1,65 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
-  <script>
-$(document).ready(function(){
-  $(".btn1").click(function(){
-    $("#tab1").hide();
-  });
-  $(".btn2").click(function(){
-    $("#tab1").show();
-  });
-});
-function hapus(url)
-    {
-      swal({
-        title: "Hapus Jangan?",
-          text: "Data tidak bisa dikembalikan",
-          icon: "warning",
-        // buttons: true,
-        buttons: ["tidak", "ya!"],
-        dangerMode: true,
-        })
-      .then((willDelete) => {
-        if (willDelete) {
-          swal({
-            title: "Poof!",
-              text: "Data dihapus!",
-            icon: "success",
-            closeOnConfirm: true,
-          })
-          .then((okay) =>{
-            if(okay)
-              window.location = url;
-            else
-              window.location = url;
-          });
-        } 
-        else {
-          swal({
-            title: "Safe!",
-              text: "Data tidak dihapus!",
-          });
-        }
-      });
-      return false;
-    }
-</script>
-<script>
-$(document).ready(function(){
-  $(".btn3").click(function(){
-    $("#tab2").hide();
-  });
-  $(".btn4").click(function(){
-    $("#tab2").show();
-  });
-});
-</script>
-<script src="<?=base_url()?>assets/dist/js/sort-table.js"></script>
+	<title>SPK Profile Matching</title>
 	<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/dist/js/sort-table.js">
 </head>
@@ -78,6 +20,7 @@ $(document).ready(function(){
       <li class="nav-item">
         <a class="nav-link" href="<?=base_url()?>Target">Target</a>
       </li>
+      <!--
       <li class="nav-item">
         <a class="nav-link" href="<?=base_url()?>Aspek">Aspek</a>
       </li>
@@ -86,7 +29,7 @@ $(document).ready(function(){
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?=base_url()?>Nilai">Nilai</a>
-      </li>
+      </li>-->
       <li class="nav-item">
         <a class="nav-link" href="Perhitungan">Perhitungan</a>
       </li>

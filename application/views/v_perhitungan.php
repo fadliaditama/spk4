@@ -4,7 +4,7 @@
 		<br>
 		<div>
 			<h2>Tabel Aspek Kandungan Asam</h2>
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="tab1">
 				<thead>
 					<tr>
 						<th>No</th>
@@ -33,11 +33,15 @@
 					?>
 				</tbody>
 			</table>
+			<div align="right">
+				<button class="btn1 btn btn-sm btn-danger">Hide</button>
+				<button class="btn2 btn btn-sm btn-warning">Show</button>
+			</div>
 		</div>
 		<br>
 		<div>
 			<h2>Tabel Aspek Kandungan Non Asam</h2>
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="tab2">
 				<thead>
 					<tr>
 						<th>No</th>
@@ -68,11 +72,15 @@
 					?>
 				</tbody>
 			</table>
+			<div align="right">
+				<button class="btn3 btn btn-sm btn-danger">Hide</button>
+				<button class="btn4 btn btn-sm btn-warning">Show</button>
+			</div>
 		</div>
 		<br>
 		<div>
 			<h2>Tabel GAP Kandungan Asam</h2>
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="tab3">
 				<thead>
 					<tr>
 						<th>No</th>
@@ -101,11 +109,15 @@
 					?>
 				</tbody>
 			</table>
+			<div align="right">
+				<button class="btn5 btn btn-sm btn-danger">Hide</button>
+				<button class="btn6 btn btn-sm btn-warning">Show</button>
+			</div>
 		</div>
 		<br>
 		<div>
 			<h2>Tabel GAP Kandungan Non Asam</h2>
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="tab4">
 				<thead>
 					<tr>
 						<th>No</th>
@@ -136,11 +148,15 @@
 					?>
 				</tbody>
 			</table>
+			<div align="right">
+				<button class="btn7 btn btn-sm btn-danger">Hide</button>
+				<button class="btn8 btn btn-sm btn-warning">Show</button>
+			</div>
 		</div>
 		<br>
 		<div>
 			<h2>Ketentuan Pembobotan</h2>
-			<table class="table table-bordered">
+			<table class="table table-bordered table-sm">
 				<thead>
 					<tr>
 						<th>Selisih</th>
@@ -149,8 +165,40 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Angka</td>
-						<td>Nilai</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>4.5</td>
+					</tr>
+					<tr>
+						<td>-1</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>3.5</td>
+					</tr>
+					<tr>
+						<td>-2</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>2.5</td>
+					</tr>
+					<tr>
+						<td>-3</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>1.5</td>
+					</tr>
+					<tr>
+						<td>-4</td>
+						<td>1</td>
 					</tr>
 				</tbody>
 			</table>

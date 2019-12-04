@@ -1,7 +1,12 @@
 <?php $this->load->view('layout/header');?>
-	<div class="container"> 
-		<h1>Alternatif</h1>
-		<form id="myform" method="post" onsubmit="tambah();return false;" action='<?= base_url('alternatif/insert') ?>'>
+	<div class="container">
+		<br> 
+		<div class="card">
+		  <div class="card-header">
+		   Tambah Data
+		  </div>
+		  <div class="card-body">
+		  	<form id="myform" method="post" onsubmit="tambah();return false;" action='<?= base_url('alternatif/insert') ?>'>
 		  <div class="row">
 		    <div class="col-md-3">
 		    	<label for="">Nama Alternatif</label>
@@ -56,7 +61,12 @@
 		  <div>
 		  	<button type="submit" class="btn btn-primary" value="tambah">Tambah</button>
 		  </div>
-	</form>
+	</form>	
+		  </div>
+		</div>
+		<br>
+		<h1>Alternatif</h1>
+		
 		<br>
 		<table class="table table-bordered">
 			<thead>

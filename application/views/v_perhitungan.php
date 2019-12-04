@@ -156,7 +156,7 @@
 		<br>
 		<div>
 			<h2>Ketentuan Pembobotan</h2>
-			<table class="table table-bordered table-sm">
+			<table class="table table-bordered table-sm" id="tab5">
 				<thead>
 					<tr>
 						<th>Selisih</th>
@@ -202,11 +202,15 @@
 					</tr>
 				</tbody>
 			</table>
+			<div align="right">
+				<button class="btn9 btn btn-sm btn-danger">Hide</button>
+				<button class="btn10 btn btn-sm btn-warning">Show</button>
+			</div>
 		</div>
 		<br>
 		<div>
 			<h2>Pembobotan Kandungan Asam</h2>
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="tab6">
 				<thead>
 					<tr>
 						<th>No</th>
@@ -235,11 +239,15 @@
 					?>
 				</tbody>
 			</table>
+			<div align="right">
+				<button class="btn11 btn btn-sm btn-danger">Hide</button>
+				<button class="btn12 btn btn-sm btn-warning">Show</button>
+			</div>
 		</div>
 		<br>
 		<div>
 			<h2>Pembobotan Kandungan Non Asam</h2>
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="tab7">
 				<thead>
 					<tr>
 						<th>No</th>
@@ -270,11 +278,15 @@
 					?>
 				</tbody>
 			</table>
+			<div align="right">
+				<button class="btn13 btn btn-sm btn-danger">Hide</button>
+				<button class="btn14 btn btn-sm btn-warning">Show</button>
+			</div>
 		</div>
 		<br>
 		<div>
 			<h2>Perhitungan Factor Kandungan Asam</h2>
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="tab8">
 				<thead>
 					<tr>
 						<th>No</th>
@@ -307,12 +319,16 @@
 					?>
 				</tbody>
 			</table>
+			<div align="right">
+				<button class="btn15 btn btn-sm btn-danger">Hide</button>
+				<button class="btn16 btn btn-sm btn-warning">Show</button>
+			</div>
 		</div>
 		<br>
 		<br>
 		<div>
 			<h2>Ranking</h2>
-			<table class="table table-bordered js-sort-table">
+			<table class="table table-bordered js-sort-table" id="tab9">
 				<thead>
 					<tr>
 						<th>No</th>
@@ -341,6 +357,10 @@
 					?>
 				</tbody>
 			</table>
+			<div align="right">
+				<button class="btn17 btn btn-sm btn-danger">Hide</button>
+				<button class="btn18 btn btn-sm btn-warning">Show</button>
+			</div>
 		</div>
 	</div>
 <?php $this->load->view('layout/footer');?>

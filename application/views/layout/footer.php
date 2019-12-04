@@ -42,6 +42,46 @@ $(document).ready(function(){
     $("#tab4").show();
   });
 });
+$(document).ready(function(){
+  $(".btn9").click(function(){
+    $("#tab5").hide();
+  });
+  $(".btn10").click(function(){
+    $("#tab5").show();
+  });
+});
+$(document).ready(function(){
+  $(".btn11").click(function(){
+    $("#tab6").hide();
+  });
+  $(".btn12").click(function(){
+    $("#tab6").show();
+  });
+});
+$(document).ready(function(){
+  $(".btn13").click(function(){
+    $("#tab7").hide();
+  });
+  $(".btn14").click(function(){
+    $("#tab7").show();
+  });
+});
+$(document).ready(function(){
+  $(".btn15").click(function(){
+    $("#tab8").hide();
+  });
+  $(".btn16").click(function(){
+    $("#tab8").show();
+  });
+});
+$(document).ready(function(){
+  $(".btn17").click(function(){
+    $("#tab9").hide();
+  });
+  $(".btn18").click(function(){
+    $("#tab9").show();
+  });
+});
 function hapus(url)
     {
       swal({

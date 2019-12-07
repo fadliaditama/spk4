@@ -69,6 +69,7 @@ class M_Gap extends CI_Model {
 
 		foreach ($raw_asam as $key => $value) {
 			foreach ($value as $key2 => $value2) {
+				//fixed acid
 				if($key2 == 0)
 				{
 					if(13 <= $value2 && $value2 <= 16)
@@ -80,6 +81,7 @@ class M_Gap extends CI_Model {
 					else if(0 <= $value2 && $value2 <= 5)
 						$alt_asam[$key][$key2] = 4;
 				}
+				//volatile acidity
 				else if($key2 == 1)
 				{
 					if(1.6 <= $value2 && $value2 <= 2)
@@ -91,6 +93,7 @@ class M_Gap extends CI_Model {
 					else if(0 <= $value2 && $value2 <= 0.5)
 						$alt_asam[$key][$key2] = 4;
 				}
+				//citric acidity
 				else if($key2 == 2)
 				{
 					if(0.76 <= $value2 && $value2 <= 1)
@@ -102,6 +105,7 @@ class M_Gap extends CI_Model {
 					else if(0 <= $value2 && $value2 <= 0.26)
 						$alt_asam[$key][$key2] = 4;
 				}
+				//ph
 				else if($key2 == 3)
 				{
 					if(0 <= $value2 && $value2 <= 1)
@@ -118,6 +122,7 @@ class M_Gap extends CI_Model {
 
 		foreach ($raw_non_asam as $key => $value) {
 			foreach ($value as $key2 => $value2) {
+				//residual_sugar
 				if($key2 == 0)
 				{
 					if(13 <= $value2 && $value2 <= 16)
@@ -141,6 +146,7 @@ class M_Gap extends CI_Model {
 					else if(0.4 <= $value2 && $value2 <= 1)
 						$alt_non_asam[$key][$key2] = 4;
 				}
+				//free sulfur dioxide
 				else if($key2 == 2)
 				{
 					if(1 <= $value2 && $value2 <= 25)
@@ -152,6 +158,7 @@ class M_Gap extends CI_Model {
 					else if(75 <= $value2 && $value2 <= 100)
 						$alt_non_asam[$key][$key2] = 4;
 				}
+				//sulphate
 				else if($key2 == 3)
 				{
 					if(1.6 <= $value2 && $value2 <= 2)
@@ -163,6 +170,7 @@ class M_Gap extends CI_Model {
 					else if(0 <= $value2 && $value2 <= 0.6)
 						$alt_non_asam[$key][$key2] = 4;
 				}
+				//alcohol
 				else if($key2 == 4)
 				{
 					if(12 <= $value2 && $value2 <= 16)

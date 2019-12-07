@@ -6,7 +6,7 @@
 	<hr class="my-4">
 	<div class="col-sm-4">
 		<ul class="list-group list-group-flush">
-		  	<li class="list-group-item active">Daftar Anggota</li>
+		  	<li class="list-group-item list-group-item-action list-group-item-dark">Daftar Anggota</li>
 		  	<li class="list-group-item">Acmad Fadli Aditama (09021181621020)</li>
 		 	<li class="list-group-item">Destia Asri Felliani (09021181621014)</li>
 		  	<li class="list-group-item">Kartika Rahmayani (09021281621042)</li>

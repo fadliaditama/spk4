@@ -30,7 +30,7 @@
 		    </div>
 		    <div class="col-md-2">
 		    	<label for="">pH</label>
-		      <input type="number" class="form-control" name="ph" required="" min="0" max="14">
+		      <input type="number" class="form-control" name="ph" required="" min="0" max="7">
 		    </div>
 		  </div>
 		  <br>
